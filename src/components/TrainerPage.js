@@ -18,7 +18,7 @@ class TrainerPage extends React.Component {
                 <h3>This is the parent and grand-parent component</h3>
                 <h4>Fetch requests go here</h4>
                 <div>
-                    <PokemonIndex />
+                    <PokemonIndex pokemon={this.state.pokemons}/>
                 </div>
             </div>
         )
@@ -28,12 +28,16 @@ class TrainerPage extends React.Component {
         fetch('http://localhost:3001/pokemon')
             .then(response => response.json())
             .then(pokemons => {
-                console.log(pokemons)
+                this.setState({
+                    pokemons: pokemons
+                })
             })
         fetch('http://localhost:3001/pokemonTeams')
             .then(response => response.json())
             .then(teams => {
-                console.log(teams)
+                this.setState({
+                    teams: teams
+                })
             })
     }
 

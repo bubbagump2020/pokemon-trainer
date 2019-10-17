@@ -7,7 +7,9 @@ class PokemonIndex extends React.Component {
             <div>
                 <h2>This is the Pokemon Index Component</h2>
                 <div>
-                    <PokemonCard />
+                    {this.props.pokemon.map(pokemon => (
+                        <PokemonCard pokemon={pokemon} />
+                    ))}
                 </div>
             </div>
         )
