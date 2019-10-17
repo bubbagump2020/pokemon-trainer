@@ -13,9 +13,12 @@ const PokemonCard = props => {
         })
     }
     
+
+
+    // {console.log(props)}
     return(
         
-        <Card>
+        <Card onClick={(e) => props.addPokemonToTeam(pokemon)}>
             <Image src={pokemon.sprites.front} wrapped ui={false} />
             <Card.Content>
                 <Card.Header align="center" size="big">{pokemon.name}</Card.Header>

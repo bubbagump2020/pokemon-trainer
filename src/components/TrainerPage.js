@@ -1,22 +1,31 @@
 import React from 'react';
 import PokemonIndex from './PokemonIndex';
+import TeamBuilder from './TeamBuilder';
 import { Header } from 'semantic-ui-react';
 
 class TrainerPage extends React.Component {
 
     constructor(){
         super()
-        this.state ={
+        this.state = {
             pokemons: [],
-            teams: []
+            teams: [],
+            myPokemon: []
         }
+    }
+
+    addPokemonToTeam = (pokemon) => {
+        this.setState({
+            myPokemon:  [...this.state.myPokemon, pokemon ]
+        })
     }
 
     render() {
         return(
             <div>
-                <Header size='huge'>Pokemon Team Builder</Header>
-                <PokemonIndex pokemon={this.state.pokemons}/>
+                <Header size='huge' align="center" >Pokemon Team Builder</Header>
+                <TeamBuilder pokemon={this.state.myPokemon} />
+                <PokemonIndex pokemon={this.state.pokemons} addPokemonToTeam={this.addPokemonToTeam}/>
             </div>
         )
     }

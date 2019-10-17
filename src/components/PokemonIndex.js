@@ -8,7 +8,7 @@ class PokemonIndex extends React.Component {
         return(
             <Card.Group >
                 {this.props.pokemon.map(pokemon => (
-                    <PokemonCard pokemon={pokemon} key={pokemon.id} />
+                    <PokemonCard pokemon={pokemon} key={pokemon.id} addPokemonToTeam={this.props.addPokemonToTeam}/>
                 ))}
             </Card.Group>
         )
