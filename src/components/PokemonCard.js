@@ -1,16 +1,37 @@
 import React from 'react';
-// import { Card } from 'semantic-ui-react';
+import { Card, Image } from 'semantic-ui-react';
 
-class PokemonCard extends React.Component {
-    render(){
-        return(
-            <div>
-                <h3>This is the Pokemon Card Component</h3>
-                <h4>A child component of PokemonIndex and grandchild of TrainerPage</h4>
 
-            </div>
-        )
+const PokemonCard = props => {
+    const { pokemon } = props
+
+    const pokemonHealth = () => {
+        return pokemon.stats.map(stat => {
+          if(stat.name === "hp") {
+            return stat.value
+          }
+        })
     }
+    
+    return(
+        
+        <Card>
+            <Image src={pokemon.sprites.front} wrapped ui={false} />
+            <Card.Content>
+                <Card.Header align="center" size="big">{pokemon.name}</Card.Header>
+            </Card.Content>
+            <Card.Content extra align="center" >
+                <span>
+                    <i className="icon heartbeat red" />
+                    {pokemonHealth()}
+                </span>
+            </Card.Content>
+        </Card>
+        
+    )
+    
+
 }
+
 
 export default PokemonCard

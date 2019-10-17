@@ -1,5 +1,6 @@
 import React from 'react';
-import PokemonIndex from './PokemonIndex'
+import PokemonIndex from './PokemonIndex';
+import { Header } from 'semantic-ui-react';
 
 class TrainerPage extends React.Component {
 
@@ -14,12 +15,8 @@ class TrainerPage extends React.Component {
     render() {
         return(
             <div>
-                <h1>This is the Trainer Page</h1>
-                <h3>This is the parent and grand-parent component</h3>
-                <h4>Fetch requests go here</h4>
-                <div>
-                    <PokemonIndex pokemon={this.state.pokemons}/>
-                </div>
+                <Header size='huge'>Pokemon Team Builder</Header>
+                <PokemonIndex pokemon={this.state.pokemons}/>
             </div>
         )
     }
