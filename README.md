@@ -1,68 +1,38 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Mod 4 Solo Project Proposal #
+## Pokemon Team Builder ##
 
-In the project directory, you can run:
+The object of this project is to show all of the first gen Pokemon and to be able to build a team of six Pokemon from this list. I should also be able to save teams of pokemon.
 
-### `yarn start`
+### User Stories ###
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. As a user I need to…
+2.  Be able to see a list of all the first generation Pokemon
+3. Be able to create a team.
+4. Be able to add a Pokemon to a team.
+5. Be able to remove a Pokemon from a team
+6. Save that team.
+7. Be able to see a list of all of my teams that I have created
+8. Delete a team from that list.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Tools Needed ###
 
-### `yarn test`
+I am going to need to build a database of both Pokemon and teams. This is going to manifest itself as json server with two key-value pairs, Pokemon and teams. Pokemon will have all of the Pokemon and teams will have all of the teams created. Teams will initially be empty, but will fill as the user saves teams
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Data Structure ###
 
-### `yarn build`
+* App
+    * TrainerPage
+        * PokemonIndex
+            * PokemonCard []
+        * TeamBuilder
+        * TeamIndex
+            * TeamCard []
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+### UI Element ###
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+UI elements will be heavily drawn from Semantic-UI. A stretch goal is to be able to have at least one of the child components of TrainerPage be a dropdown menu (probably either TeamBuilder or TeamIndex)
